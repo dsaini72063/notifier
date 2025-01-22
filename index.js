@@ -34,7 +34,7 @@ client.on("messageCreate", async (message) => {
     if (message.embeds.length > 0) {
       const embed = message.embeds[0]; // Get the first embed
 
-    Check if the embed description contains the desired text
+    //Check if the embed description contains the desired text
       if (
     embed.description &&
     embed.description.includes(

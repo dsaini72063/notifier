@@ -31,16 +31,16 @@ client.on("messageCreate", async (message) => {
       return;
 
     // Check if the message contains embeds
-    // if (message.embeds.length > 0) {
-    //   const embed = message.embeds[0]; // Get the first embed
+    if (message.embeds.length > 0) {
+      const embed = message.embeds[0]; // Get the first embed
 
-    // Check if the embed description contains the desired text
-    //   if (
-    // embed.description &&
-    // embed.description.includes(
-    //   "Click the button below to enter the rain event!"
-    // )
-    //   ) {
+    Check if the embed description contains the desired text
+      if (
+    embed.description &&
+    embed.description.includes(
+      "Click the button below to enter the rain event!"
+    )
+      ) {
     try {
       const targetChannel = await client.channels.fetch(forwardToChannelId);
 
@@ -60,8 +60,8 @@ client.on("messageCreate", async (message) => {
     } catch (error) {
       console.error("Error forwarding the message:", error);
     }
-    //   }
-    // }
+      }
+    }
   }
 });
 
